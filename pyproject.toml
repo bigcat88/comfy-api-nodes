@@ -5,7 +5,7 @@ requires = [
 ]
 
 [project]
-name = "comfyui-api-nodes"
+name = "comfy-api-nodes"
 description = "bla bla"
 readme = "README.md"
 keywords = [
@@ -16,7 +16,7 @@ license = "GPL-3.0-only"
 authors = [
   { name = "Alexander Piskun", email = "bigcat88@icloud.com" },
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.9"
 classifiers = [
   "Development Status :: 1 - Planning",
 ]
@@ -24,7 +24,7 @@ dynamic = [
   "version",
 ]
 dependencies = [
-  "comfy-core>=0.3.62",
+  "comfy-core==0.3.61",
 ]
 [tool.hatch.version]
 path = "comfy_api_nodes/_version.py"
@@ -34,3 +34,6 @@ include = [
   "/comfy_api_nodes",
   "/README.md",
 ]
+
+[tool.hatch.build.targets.wheel]
+packages = ["comfy_api_nodes"]

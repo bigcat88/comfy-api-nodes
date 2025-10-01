@@ -4,7 +4,7 @@ import os
 def custom_nodes_list() -> list[tuple[str, str]]:
     """Returns list of tuples with [AbsolutePathToTheNodeFile, ModuleParent]"""
 
-    api_nodes_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "comfy_api_nodes")
+    api_nodes_dir = str(os.path.dirname(os.path.realpath(__file__)))
     api_nodes_files = [
         "canary.py",  # not a node - but required for now (keep number of changes minimum for demo)
         "nodes_ideogram.py",

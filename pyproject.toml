@@ -1,0 +1,36 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = [
+  "hatchling>=1.18",
+]
+
+[project]
+name = "comfyui-api-nodes"
+description = "bla bla"
+readme = "README.md"
+keywords = [
+  "api",
+  "comfyui",
+]
+license = "GPL-3.0-only"
+authors = [
+  { name = "Alexander Piskun", email = "bigcat88@icloud.com" },
+]
+requires-python = ">=3.10"
+classifiers = [
+  "Development Status :: 1 - Planning",
+]
+dynamic = [
+  "version",
+]
+dependencies = [
+  "comfy-core>=0.3.62",
+]
+[tool.hatch.version]
+path = "comfy_api_nodes/_version.py"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/comfy_api_nodes",
+  "/README.md",
+]
